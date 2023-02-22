@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "1437b61c-4776-4a35-b64a-ebc81a68c4ea",
+		"name": "fast_api_eg",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13844810"
+	},
+	"item": [
+		{
+			"name": "Get_countries",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.tQe-7OApe0Yc1wT4FLakQqWlBH-LbN0vLEGUpchcrAY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:5000/country?limit=10&keyword=A",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5000",
+					"path": [
+						"country"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "search-filter",
+							"disabled": true
+						},
+						{
+							"key": "role",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "keyword",
+							"value": "A"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://0.0.0.0:5000/country?type=search-filter&role=1&status=1&limit=10&keyword=A",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://0.0.0.0:5000/country?limit=10&keyword=A",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "5000",
+							"path": [
+								"country"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "search-filter",
+									"disabled": true
+								},
+								{
+									"key": "role",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "keyword",
+									"value": "A"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Tue, 14 Feb 2023 09:32:31 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "815"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"message\": \"Admin details fetch successful\",\n    \"data\": [\n        {\n            \"country_code\": \"AFE\",\n            \"country_name\": \"Africa Eastern and Southern\"\n        },\n        {\n            \"country_code\": \"AFW\",\n            \"country_name\": \"Africa Western and Central\"\n        },\n        {\n            \"country_code\": \"ARB\",\n            \"country_name\": \"Arab World\"\n        },\n        {\n            \"country_code\": \"EAR\",\n            \"country_name\": \"Early-demographic dividend\"\n        },\n        {\n            \"country_code\": \"EAS\",\n            \"country_name\": \"East Asia & Pacific\"\n        },\n        {\n            \"country_code\": \"EAP\",\n            \"country_name\": \"East Asia & Pacific (excluding high income)\"\n        },\n        {\n            \"country_code\": \"TEA\",\n            \"country_name\": \"East Asia & Pacific (IDA & IBRD countries)\"\n        },\n        {\n            \"country_code\": \"ECA\",\n            \"country_name\": \"Europe & Central Asia (excluding high income)\"\n        },\n        {\n            \"country_code\": \"IDA\",\n            \"country_name\": \"IDA total\"\n        },\n        {\n            \"country_code\": \"LAC\",\n            \"country_name\": \"Latin America & Caribbean (excluding high income)\"\n        }\n    ],\n    \"status\": true,\n    \"info\": {\n        \"count\": 10,\n        \"limit\": 10\n    }\n}"
+				}
+			]
+		}
+	]
+}
